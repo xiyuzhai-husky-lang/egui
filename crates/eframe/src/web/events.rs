@@ -129,6 +129,7 @@ fn install_keydown(runner_ref: &WebRunner, target: &EventTarget) -> Result<(), J
             let modifiers = modifiers_from_kb_event(&event);
             if !modifiers.ctrl
                 && !modifiers.command
+                && !modifiers.alt
                 // When text agent is focused, it is responsible for handling input events
                 && !runner.text_agent.has_focus()
             {

@@ -789,6 +789,7 @@ impl State {
                 // contain some data even when the key is released.
                 let is_cmd = self.egui_input.modifiers.ctrl
                     || self.egui_input.modifiers.command
+                    || self.egui_input.modifiers.alt
                     || self.egui_input.modifiers.mac_cmd;
                 if pressed && !is_cmd {
                     self.egui_input
